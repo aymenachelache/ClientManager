@@ -1,0 +1,158 @@
+/* Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.h1,
+.h2 {
+    margin: 20px auto;
+    text-align: center;
+}
+.error {
+  color: red;
+  display: block;
+}
+.error p {
+  transition: all 0.3s ease;
+}
+.hidden {
+  opacity: 0;
+  cursor: default;
+}
+.d-none {
+  display: none !important;
+}
+.btn {
+  min-width: 130px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0dbfaf;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #42afa4;
+}
+a:focus,
+.btn:focus {
+  outline: 1px solid #5bc2b9;
+  border-radius: 6px;
+}
+/**************** First BOX ****************/
+.first-box {
+  margin: 40px 0;
+}
+.first-box .form {
+  margin: 10px 0;
+}
+.first-box .form form,
+.edit-box .form form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.first-box input,
+.edit-box input {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #888;
+  border-radius: 6px;
+}
+.first-box input:focus,
+.edit-box input:focus {
+  outline: 3px solid #DDD;
+}
+.first-box button.add-btn,
+.edit-box button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+}
+.first-table  {
+  width: 100%;
+}
+.first-table th,
+.first-table tr td {
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+  background-color: #eee;
+}
+.icon {
+  cursor: pointer;
+}
+.edit {
+  color: blue;
+}
+.remove {
+  color: red;
+}
+/* Edit Client Style */
+.bg-grey {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+}
+.edit-box {
+  position: absolute;
+  width: 80%;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 99;
+}
+.edit-box .close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
+  font-size: 25px;
+}
+.edit-box .close:hover {
+  color: red;
+}
+.edit-box h2 {
+  color: #000;
+}
+
+
+/*************** Media Container  ***************/
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 558) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Css File -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+</head>
+
+<body>
+  <h1 class="h1">TITLE ONE</h1>
+  <div class="container">
+    <div class="first-box">
+      <h2 class="h2">CLIENTS</h2>
+      <div class="form">
+        <form id="firstForm" action="">
+          <input type="text" id="firstName" placeholder="Entrer The Name ..." value=""/>
+          <input type="text" id="firstLink" placeholder="Entrer The Link ..." value=""/>
+          <button type="submit" id="firstButton" class="btn add-btn">Add Client</button>
+          <div class="error">
+            <p class="hidden">The Name And The Link Is Required.</p>
+          </div>
+        </form>
+      </div>
+      <table class="first-table">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Link</th>
+            <th onclick="handleDelete">Action</th>
+          </tr>
+        </thead>
+        <tbody class="body-one">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Page Edit -->
+  <div class="bg-grey d-none"></div>
+  <div class="edit-box d-none">
+    <div class="form">
+      <i class="fa fa-xmark close"></i>
+      <h2 class="h2">Edit Client</h2>
+      <form id="editForm" action="">
+        <input type="text" id="editName" placeholder="Entrer The Name ..." />
+        <input type="text" id="editLink" placeholder="Entrer The Link ..." />
+        <button type="submit" id="editButton" class="btn">Edit Client</button>
+        <div class="error">
+          <p class="d-none">The Name And The Link Is Required.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Js File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

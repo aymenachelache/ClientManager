@@ -1,6 +1,6 @@
 
 
-let MyClients = JSON.parse(window.localStorage.getItem("MyClients"));
+let MyClients = JSON.parse(window.localStorage.getItem("MyClients")) ? JSON.parse(window.localStorage.getItem("MyClients")) : [];
 
 addClientToTable();
 handleDelete();

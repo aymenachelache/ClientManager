@@ -62,6 +62,7 @@ buttonAddOne.addEventListener("click", (e) => {
 
         name.click();
         handleDelete();
+        handleEdit();
     } else {
         error.classList.remove("hidden");
     }
@@ -201,8 +202,22 @@ function handleEdit() {
             let EditName = Array.from(e.target.parentElement.parentElement.children)[1].innerHTML;
             let EditLink = Array.from(e.target.parentElement.parentElement.children)[2].innerHTML;
             let key;
-            MyClients.map((client, index) => client.name === EditName ? key = index : "");
-
+            if (SubTitleClicker === "My Clients") {
+                array = MyClients;
+            } else if (SubTitleClicker === "My Customers") {
+                array = MyCustomers;
+            } else if (SubTitleClicker === "My Students") {
+                array = MyStudents;
+            } else if (SubTitleClicker === "Users") {
+                array = MyUsers;
+            } else if (SubTitleClicker === "Products") {
+                array = MyProducts;
+            } else if (SubTitleClicker === "Store One") {
+                array = MyStoreOne;            
+            } else if (SubTitleClicker === "Store Two") {
+                array = MyStoreTwo;
+            }
+            array.map((element, index) => element.name === EditName ? key = index : "");
             background.classList.remove("d-none");
             editBox.classList.remove("d-none");
 
@@ -218,8 +233,6 @@ function handleEdit() {
                 if (SubTitleClicker === "My Clients") {
                     MyClients[key].name = editNameInput.value;
                     MyClients[key].link = editLinkInput.value;
-                    
-
                 } else if (SubTitleClicker === "My Customers") {
                     MyCustomers[key].name = editNameInput.value;
                     MyCustomers[key].link = editLinkInput.value;
@@ -243,7 +256,6 @@ function handleEdit() {
                 } else if (SubTitleClicker === "Store Two") {
                     MyStoreTwo[key].name = editNameInput.value;
                     MyStoreTwo[key].link = editLinkInput.value;
-
                 }
                 addData(SubTitleClicker);
                 background.classList.add("d-none");
